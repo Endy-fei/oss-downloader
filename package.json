@@ -2,13 +2,13 @@
     "name": "@myconjure/aliyunoss-downloader",
     "version": "1.0.4",
     "description": "一个支持配置文件、MD5 校验、跨平台的阿里云 OSS 批量下载器",
-    "main": "./dist/index.js",
+    "main": "./dist/src/index.js",
     "bin": {
-        "aliyunoss-downloader": "./dist/cli/index.js"
+        "aliyunoss-downloader": "./dist/cli/cli.js"
     },
     "scripts": {
         "build": "tsc",
-        "start": "ts-node cli/index.ts"
+        "start": "ts-node cli/cli.ts"
     },
     "keywords": [
         "aliyun",
