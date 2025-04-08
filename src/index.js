@@ -1,7 +1,6 @@
 import OSS from 'ali-oss';
 import fs from 'fs/promises';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
 /**
  * 从阿里云 OSS 下载多个对象到本地路径
@@ -38,7 +37,6 @@ export async function downloadFromOSS(config) {
       const result = await client.get(objectName);
       const filename = path.basename(objectName);
       const filePath = path.join(basePath, filename);
-
       await fs.writeFile(filePath, result.content);
       console.log(`✅ 下载成功: ${objectName} → ${filePath}`);
     } catch (err) {
