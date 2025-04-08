@@ -1,24 +1,33 @@
 {
     "name": "@myconjure/aliyunoss-downloader",
-    "version": "1.0.2",
-    "description": "从阿里云 OSS 批量下载文件的工具包，支持命令行调用",
-    "main": "src/index.js",
-    "publishConfig": {
-        "access": "public"
-    },
+    "version": "1.0.4",
+    "description": "一个支持配置文件、MD5 校验、跨平台的阿里云 OSS 批量下载器",
+    "main": "./dist/index.js",
     "bin": {
-        "aliyunoss-downloader": "bin/cli.js"
+        "aliyunoss-downloader": "./dist/cli/index.js"
     },
     "scripts": {
-        "start": "node bin/cli.js"
+        "build": "tsc",
+        "start": "ts-node cli/index.ts"
     },
-    "author": "endyfei",
+    "keywords": [
+        "aliyun",
+        "oss",
+        "downloader",
+        "cli",
+        "md5"
+    ],
+    "author": "Endyfei",
     "license": "MIT",
     "dependencies": {
-        "ali-oss": "^6.18.1",
-        "chalk": "^5.3.0",
+        "ali-oss": "^6.17.1",
         "commander": "^11.1.0",
-        "strip-json-comments": "^5.0.1"
+        "jsonc-parser": "^3.2.0"
     },
-    "type": "module"
+    "devDependencies": {
+        "@types/ali-oss": "^6.16.11",
+        "@types/node": "^20.11.30",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
+    }
 }

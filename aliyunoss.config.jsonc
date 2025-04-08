@@ -1,0 +1,19 @@
+{
+    // 阿里云 OSS 凭据
+    "accessKeyId": "your-access-key-id",
+    "accessKeySecret": "your-access-key-secret",
+    "region": "oss-cn-hangzhou",
+    "bucket": "your-bucket-name",
+  
+    // 下载列表：每一项一一对应 source 和 target
+    "downloads": [
+      {
+        "source": "path/in/oss/file1.jar",
+        "target": "./libs/file1.jar"
+      },
+      {
+        "source": "another/file2.zip",
+        "target": "./dist/file2.zip"
+      }
+    ]
+  }
