@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - 'v*'  # 例如 v1.0.0
-    branches:
-      - main  # 可选：自动发布最新分支
 
 jobs:
   publish:
