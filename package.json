@@ -1,6 +1,6 @@
 {
     "name": "@myconjure/aliyunoss-downloader",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "一个支持配置文件、MD5 校验、跨平台的阿里云 OSS 批量下载器",
     "main": "./dist/src/index.js",
     "bin": {

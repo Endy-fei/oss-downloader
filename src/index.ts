@@ -50,8 +50,10 @@ async function downloadFiles(configPath: string) {
 
     if (fs.existsSync(targetPath)) {
       try {
-        const localMd5 = md5File(targetPath);
-        const remoteMd5 = await getOssObjectMd5(client, source);
+        const localMd5 = md5File(targetPath).toLowerCase();
+        const remoteMd5 = (await getOssObjectMd5(client, source)).toLowerCase();
+        console.log(`本地 MD5: ${localMd5}`);
+        console.log(`远程 MD5: ${remoteMd5}`);
         if (localMd5 === remoteMd5) {
           console.log(`✅ 跳过 ${source}，文件已存在且 MD5 相同`);
           skipDownload = true;
