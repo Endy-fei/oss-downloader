@@ -6,6 +6,7 @@
     "bin": {
         "aliyunoss-downloader": "./dist/cli/cli.js"
     },
+    "types": "./dist/types/src/index.d.ts",
     "scripts": {
         "build": "tsc",
         "start": "ts-node cli/cli.ts"

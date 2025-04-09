@@ -1,12 +1,18 @@
 {
-    "compilerOptions": {
-      "target": "ES2018",
-      "module": "CommonJS",
-      "outDir": "./dist",
-      "strict": true,
-      "esModuleInterop": true,
-      "resolveJsonModule": true,
-      "skipLibCheck": true
-    },
-    "include": ["src", "cli"]
-  }
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "declarationDir": "dist/types",
+    "target": "ES2018",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src",
+    "cli"
+  ]
+}
